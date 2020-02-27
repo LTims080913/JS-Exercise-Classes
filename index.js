@@ -90,7 +90,7 @@ drive(distance){
   } else {
     this.odometer += this.tank * this.milesPerGallon;
     this.tank = 0;
-    return `I ran out of fuel at ${this.odometer} miles!`
+    return `I ran out of fuel at ${this.odometer} miles!`;
   }
 }
 }
@@ -108,13 +108,13 @@ drive(distance){
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-  constructor(name, age, location){
-    this.name = name;
-    this.age = age;
-    this.location = location;
+  constructor(attributes){
+    this.name = attributes.name;
+    this.age = attributes.age;
+    this.location = attributes.location;
   }
   speak(){
-    return `Hello my name is ${this.name}, I am from ${location}.`
+    return `Hello my name is ${this.name}, I am from ${this.location}.`
   }
 }
 
